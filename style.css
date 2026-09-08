@@ -13,3 +13,250 @@ body {
     min-height: 100vh;
     padding: 0 15px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Epilogue:wght@300;400&family=Oswald:wght@700&display=swap');
+
+
+/* =========================
+   QUEM SOMOS
+========================= */
+
+.secao-quem-somos {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 100px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+
+    background: #303030;
+    color: #E2EAE6;
+}
+
+
+/* =========================
+   GALERIA
+========================= */
+
+.quem-somos-galeria {
+    width: 100%;
+    max-width: 600px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 75px 45px 120px;
+
+    gap: 5px;
+}
+
+.foto,
+.bloco-destaque {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+/* 4 fotos superiores */
+
+.foto-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.foto-2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.foto-3 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.foto-4 {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+
+/* Faixa */
+
+.bloco-destaque {
+    background: #6C3BEC;
+}
+
+.quem-somos-galeria>.bloco-destaque {
+    grid-column: 1 / 5;
+    grid-row: 2;
+}
+
+
+/* Foto grande */
+
+.foto-5 {
+    grid-column: 1 / 3;
+    grid-row: 3;
+}
+
+
+/* Coluna direita */
+
+.coluna-fotos {
+    grid-column: 3 / 5;
+    grid-row: 3;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+}
+
+
+/* =========================
+   IMAGENS
+========================= */
+
+.foto {
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*
+   Troque os caminhos abaixo
+   pelas fotos reais da turma.
+*/
+
+.foto-1 {
+    background-image: url("img/foto1.jpg");
+}
+
+.foto-2 {
+    background-image: url("img/foto2.jpg");
+}
+
+.foto-3 {
+    background-image: url("img/foto3.jpg");
+}
+
+.foto-4 {
+    background-image: url("img/foto4.jpg");
+}
+
+.foto-5 {
+    background-image: url("img/foto5.jpg");
+}
+
+.foto-6 {
+    background-image: url("img/foto6.jpg");
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.quem-somos-conteudo {
+    max-width: 560px;
+}
+
+
+/* Tag */
+
+.quem-somos-tag {
+    display: inline-block;
+
+    padding: 7px 20px;
+    margin-bottom: 25px;
+
+    background: #6C3BEC;
+    border-radius: 4px;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #E2EAE6;
+}
+
+
+/* Título */
+
+.quem-somos-conteudo h2 {
+    margin: 0 0 30px;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(42px, 5vw, 65px);
+    font-weight: 700;
+    line-height: 0.98;
+
+    color: #E2EAE6;
+}
+
+
+/* Texto */
+
+.quem-somos-conteudo p {
+    margin: 0 0 14px;
+
+    font-family: 'Epilogue', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+
+    color: #E2EAE6;
+}
+
+
+/* Destaques dentro do texto */
+
+.quem-somos-conteudo strong {
+    font-weight: 400;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    .secao-quem-somos {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding: 80px 7%;
+    }
+
+    .quem-somos-galeria {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .quem-somos-conteudo {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .secao-quem-somos {
+        padding: 60px 5%;
+    }
+
+    .quem-somos-galeria {
+        grid-template-rows: 55px 35px 100px;
+        gap: 4px;
+    }
+
+    .quem-somos-conteudo h2 {
+        font-size: 42px;
+    }
+
+    .quem-somos-conteudo p {
+        font-size: 13px;
+    }
+}
