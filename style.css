@@ -1,9 +1,9 @@
 :root {
-    
+
     --cor-fundo: #303030;
     --cor-texto: #E2EAE6;
     --cor-destaque: #6C3BEC;
-    
+
     /* Tipografia */
     --fonte-titulo: 'Oswald', sans-serif;
     --fonte-texto: 'Epilogue', sans-serif;
@@ -42,7 +42,7 @@ body {
     /* 4 colunas iguais para a primeira linha */
     grid-template-columns: repeat(4, 1fr);
     /* 3 linhas: pequena, média, grande */
-    grid-template-rows: 90px 100px 220px;
+    grid-template-rows: 90px 100px 300px;
     gap: 15px;
     width: 100%;
     max-width: 500px;
@@ -67,10 +67,25 @@ body {
     position: relative;
 }
 
-.foto-1 { grid-column: 1; grid-row: 1; }
-.foto-2 { grid-column: 2; grid-row: 1; }
-.foto-3 { grid-column: 3; grid-row: 1; }
-.foto-4 { grid-column: 4; grid-row: 1; }
+.foto-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.foto-2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.foto-3 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.foto-4 {
+    grid-column: 4;
+    grid-row: 1;
+}
 
 .bloco-destaque {
     grid-column: 1 / span 4;
@@ -152,6 +167,7 @@ body {
         grid-template-rows: 70px 80px 180px;
         gap: 10px;
     }
+
     .coluna-inferior-direita {
         gap: 10px;
     }
