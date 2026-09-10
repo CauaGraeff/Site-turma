@@ -24,6 +24,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.principal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .secao-quem-somos {
@@ -314,6 +323,19 @@ body {
                 grid-template-columns: 1fr;
             }
         }
+
+footer {
+    width: 100%;
+    background-color: #6c3bec;
+    color: #e2eae6;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    margin-top: 268px;
+    font-size: 14px;
+}
 
 
 @media (max-width: 900px) {
