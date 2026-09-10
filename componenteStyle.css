@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+}
+
+.principal {
+    min-height: 100vh;
+    padding: 0 15px;
+}
+
+
+
+  :root {
+    --bg: #0a0a0a;
+    --card-bg: #1c1c1c;
+    --accent: #e3df66;
+    --text-primary: #ffffff;
+    --text-body: #c9c9c9;
+    --dark-on-accent: #1a1a1a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-primary);
+  }
+
+  section.mural {
+    padding: 64px 32px 96px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .mural-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+
+  .logo-pill {
+    background: var(--accent);
+    color: var(--dark-on-accent);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 6px;
+  }
+
+  .mural-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .mural-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .mural-track::-webkit-scrollbar { display: none; }
+
+  .mural-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 0 0 calc((100% - 48px) / 3);
+    scroll-snap-align: start;
+    transition: background 0.25s ease, transform 0.25s ease;
+  }
+
+  .mural-card:hover {
+    background: var(--accent);
+    transform: translateY(-4px);
+  }
+
+  .mural-card:hover p,
+  .mural-card:hover .meta {
+    color: var(--dark-on-accent);
+  }
+
+  .mural-card p {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--text-body);
+    transition: color 0.25s ease;
+  }
+
+  .mural-card .meta {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-primary);
+    transition: color 0.25s ease;
+  }
+
+  .scroll-bar-track {
+    position: relative;
+    margin-top: 28px;
+    height: 4px;
+    border-radius: 2px;
+    background: #2a2a2a;
+    cursor: pointer;
+  }
+
+  .scroll-bar-thumb {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    border-radius: 2px;
+    background: var(--accent);
+    cursor: grab;
+  }
+
+  .scroll-bar-thumb:active {
+    cursor: grabbing;
+  }
+
+  @media (max-width: 900px) {
+    .mural-card { flex: 0 0 calc((100% - 24px) / 2); }
+  }
+
+  @media (max-width: 640px) {
+    .mural-card { flex: 0 0 85%; }
+    .mural-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+  }
