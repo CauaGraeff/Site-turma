@@ -38,13 +38,17 @@ body {
 .secao-quem-somos {
     width: 100%;
     max-width: 1200px;
-    padding: 40px;
+    padding: 100px 0px 100px 0px; 
+    display: flex;
+    flex-direction: column;
+}
+.quem-somos-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+    width: 100%;
 }
-
 
 .quem-somos-galeria {
     display: grid;
